@@ -1,0 +1,29 @@
+--Create a shoe store database
+
+/**Create Table store
+Nike, Addidas, Reebox, Sketchers, Loafers, Slippers, Converse, Socks, Glasses, Hats, Boxers, Tshirts, Tanktops, Gloves, Balls**/
+
+Create Table store(id INTEGER PRIMARY KEY, name TEXT, color TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO store VALUES
+(1, "Nike", "White", 30, 60),
+(2, "Addidas", "Black", 30, 55),
+(3, "Reebox", "Grey", 30, 50),
+(4, "Sketchers" , "Silver", 30, 35),
+(5, "Loafers", "Gold", 30, 65),
+(6, "Slippers", "Pink", 30, 15),
+(7, "Converse", "White", 30, 60),
+(8, "Socks", "Colorful", 50, 20),
+(9, "Glasses", "Clear", 50, 35),
+(10, "Hats", "White", 100, 40),
+(11, "Boxers", "Ralph", 75, 50),
+(12, "Tshirts", "White", 50, 10),
+(13, "Tanktops", "Black", 50, 15),
+(14, "Gloves", "Blue", 30, 15),
+(15, "Balls", "Vary", 60, 25);
+
+--display the database order by price
+SELECT * FROM store ORDER BY price;
+
+-- display items with quantity less than 40 items
+SELECT * FROM store WHERE quantity < 40 
