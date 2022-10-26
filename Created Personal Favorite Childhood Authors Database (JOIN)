@@ -1,0 +1,31 @@
+--- Here I created multiple tables about my favorite childhood Authors and Books
+
+/* Create table about childhood favorite authors/*
+
+--- Here I created a table describing the authors (Easy to JOIN tables)
+
+CREATE TABLE author ( id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, lifetime INTEGER, stateborn TEXT);
+
+INSERT INTO author (fullname, lifetime, birthplace) VALUES ("C.S. Lewis", "64", "Belfast, United Kingdom" );
+INSERT INTO author (fullname, lifetime, birthplace) VALUES ("Dr. Suess", "87", "Springfield, MA");
+INSERT INTO author (fullname, lifetime, birthplace) VALUES ("Barbara Park", "66", "Mount Holly, NJ");
+INSERT INTO author (fullname, lifetime, birthplace) VALUES ("John R. Erickson", "79", "Midland, TX");
+
+--- Here I created tables where it would be easy to use the JOIN clauses to bring the information together
+
+CREATE TABLE books (id INTEGER PRIMARY KEY AUTOINCREMENT, author_id, bestseller TEXT, genre TEXT );
+
+INSERT INTO books (author_id, bestseller, genre) VALUES ("1", "Chronicles of Narnia", "children");
+INSERT INTO books (author_id, bestseller, genre) VALUES ("2", "Cat in the Hat", "children");
+INSERT INTO books (author_id, bestseller, genre) VALUES ("3", "Junie B Jones", "children");
+INSERT INTO books (author_id, bestseller, genre) VALUES ("4", "Hank The Cowdog","children");
+
+---Here I created a table showing my personal rankings using the top table "author" ids' to use in the ranking (JOIN)
+
+CREATE TABLE personalrank (id INTEGER PRIMARY KEY AUTOINCREMENT, first INTEGER, second INTEGER, third INTEGER, fourth INTEGER); 
+
+INSERT INTO personalrank ("4", "2", "1", "3");
+
+
+
+
