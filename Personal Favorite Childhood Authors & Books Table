@@ -4,7 +4,7 @@
 
 --- Here I created a table describing the authors (Easy to JOIN tables)
 
-CREATE TABLE author ( id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, lifetime INTEGER, stateborn TEXT);
+CREATE TABLE author ( id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, lifetime INTEGER, birthplace TEXT);
 
 INSERT INTO author (fullname, lifetime, birthplace) VALUES ("C.S. Lewis", "64", "Belfast, United Kingdom" );
 INSERT INTO author (fullname, lifetime, birthplace) VALUES ("Dr. Suess", "87", "Springfield, MA");
