@@ -1,4 +1,4 @@
--- Downloaded Data and Answered Questions concerning it
+--- Downloaded Data and Answered Questions concerning it
 
 #1. List each track and the quantity sold from greatest to least?
 SELECT tracks.name, COUNT(Invoice.InvoiceID) AS quantity 
