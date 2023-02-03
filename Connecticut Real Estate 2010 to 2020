@@ -1,0 +1,30 @@
+**/ Here I download data from Kaggle and answered questions using SQLiteStudio on Connecticut Residential Real Estate 2010 - 2020/**
+(https://www.kaggle.com/datasets/asasherwyn/ctrre-2011-2021?select=CTRRE+2011-2021.csv)
+
+What is the average sale price per year in Connecticut for SINGLE FAMILY HOMES from 2010 to 2020?
+SELECT DISTINCT list_year, ROUND(AVG(sale_amount),0) as AvgSale
+FROM RealEstate.Connecticut
+WHERE residential_type = "Single Family"
+GROUP BY list_year;
+
+How many Single Family Homes were sold per year 2010 to 2020?
+SELECT COUNT(residential_type) as "Single Family #", list_year
+FROM RealEstate.Connecticut
+WHERE residential_type = "Single Family" 
+GROUP BY list_year;
+
+What is the difference per home sale of assessed value and purchase price for Single Family Homes (2020)?
+SELECT list_year, town, ROUND(sale_amount - assessed_value, 0) as "Difference"
+FROM RealEstate.Connecticut
+WHERE residential_type = "Single Family"
+
+How many Single Family homes were bought celebrating the new year in January of 2020?
+SELECT COUNT(month) as January
+FROM RealEstate.Connecticut
+WHERE month = "1" and list_year = "2020" and residential_type = "Single Family";
+
+How many Single family homes where sold per city listed in the year 2020?
+SELECT DISTINCT town, COUNT (residential_type) as HomesSold 
+FROM RealEstate.Connecticut 
+WHERE residential_type = "Single Family" and list_year = "2020"
+Group BY town;
