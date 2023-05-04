@@ -35,7 +35,7 @@ SELECT * FROM BIT_DB.Spotifydata;
 SELECT track_name , artist_name, danceability
 FROM BIT_DB.Spotifydata
 ORDER BY danceability DESC
-LIMIT 20;
+LIMIT 10;
 
 
 #2. Order the songs list by popularity.
@@ -44,7 +44,7 @@ FROM BIT_DB.Spotifydata
 ORDER BY popularity DESC;
 
 
-#3. Which tracks have apopularity rate of over 85 and energy greater than 0.75?
+#3. Which tracks have a popularity rate of over 85 and energy greater than 0.75?
 SELECT track_name, popularity, energy
 FROM BIT_DB.Spotifydata
 WHERE popularity > 85 and energy > .75
